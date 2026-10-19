@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating glowing background lights -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <main class="scene">
+
+    <!-- Window 1: the stopwatch -->
+    <section class="window stopwatch">
+      <h1>Stopwatch</h1>
+
+      <div class="display" id="display">00:00.00</div>
+
+      <div class="controls">
+        <button id="resetBtn" class="btn reset" disabled>Reset</button>
+        <button id="startBtn" class="btn start">Start</button>
+        <button id="lapBtn" class="btn lap" disabled>Lap</button>
+      </div>
+
+      <p class="hint">Space = Start/Pause · L = Lap · R = Reset</p>
+      <div class="grabber"></div>
+    </section>
+
+    <!-- Window 2: lap times -->
+    <section class="window laps-box">
+      <h2>Lap Times</h2>
+      <p id="emptyMsg" class="empty">No laps yet. Start the stopwatch and press Lap.</p>
+      <ul id="lapList"></ul>
+      <div class="grabber"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
